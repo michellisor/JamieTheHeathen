@@ -97,11 +97,14 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+/* General Styles */
+ul {
+  list-style-type: none;
+}
 /* Grid Layout */
 .header {
   grid-area: header;
-  background: #006e17;
+  background: #004d00;
 }
 .menu {
   grid-area: menu;
@@ -110,11 +113,11 @@ textarea {
 }
 .content {
   grid-area: content;
-  background: #eac26d;
+  background: #c2d2ff;
 }
 .footer {
   grid-area: footer;
-  background: #006e17;
+  background: #004d00;
 }
 .grid-container {
   display: grid;
@@ -124,6 +127,31 @@ textarea {
                       'menu'
                       'content'
                       'footer';
+}
+
+/* --- HEADER --- */
+
+header {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 34% 66%;
+}
+.header h1 {
+  grid-row: 1 / span 1;
+}
+.header nav {
+  grid-row: 2 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 /* --- ASIDE --- */
@@ -234,7 +262,21 @@ textarea {
                       'menu content content'
                       'footer footer footer';
 }
-
+header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.header h1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+.header nav {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
  /* General styles */
 
 
