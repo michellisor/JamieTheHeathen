@@ -98,6 +98,44 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Grid Layout */
+.header {
+  grid-area: header;
+  background: #006e17;
+}
+.menu {
+  grid-area: menu;
+  background-color: black;
+/*  background: url('../img/jamie.png') no-repeat left; */
+}
+.content {
+  grid-area: content;
+  background: #eac26d;
+}
+.footer {
+  grid-area: footer;
+  background: #006e17;
+}
+.grid-container {
+  display: grid;
+  grid gap: 20px;
+  grid-template-rows: 100px 200px 200px 100px;
+  grid-template-areas: 'header'
+                      'menu'
+                      'content'
+                      'footer';
+}
+
+/* --- ASIDE --- */
+#jamie-photo {
+  display: none;
+}
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -183,9 +221,38 @@ textarea {
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
    ========================================================================== */
+@media only screen and (min-width: 768px) {
+/* -- Grid Layout -- */
+.grid-container {
+  display: grid;
+  grid gap: 20px;
+  grid-template-columns: 33.33% 33.33% auto;
+  grid-template-rows: 100px 200px 200px 100px;
+  grid-template-areas: 'header header header'
+                      'menu content content'
+                      'menu content content'
+                      'footer footer footer';
+}
+
+ /* General styles */
+
+
+/* -- ASIDE -- */
+aside #jamie-photo {
+  display: block;
+  height: auto;
+}
+aside .figure {
+  width: 100%;
+  height: 0;
+  padding-bottom: 80%;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+}
+
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
@@ -263,4 +330,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
