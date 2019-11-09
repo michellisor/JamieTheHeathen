@@ -102,6 +102,8 @@ html {
   font-size: 16px;
 }
 h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
   color: #004d00;
   padding: 0 20px;
   margin: 10px;
@@ -110,25 +112,39 @@ ul {
   list-style-type: none;
 }
 li {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
   color: #004d00;
   font-size: 1.25em;
 }
 h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
   padding: 10px 20px;
   margin: 0;
 }
 h3 {
+  font-family: 'Fira Sans', sans-serif;
   margin: 10px 15px;
   text-align: center;
   font-size: 1.25em;
 }
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+em {
+  color: #cc9900;
+}
 p {
+  font-family: 'Fira Sans', sans-serif;
   padding: 0 20px;
 }
 figure {
   margin: 10px;
 }
-/* Grid Layout */
+/* --- Grid Layout --- */
 .header {
   grid-area: header;
 }
@@ -139,11 +155,9 @@ figure {
 }
 .content {
   grid-area: content;
-  background: #c2d2ff;
 }
 .footer {
   grid-area: footer;
-  background: #004d00;
 }
 .grid-container {
   display: grid;
@@ -172,7 +186,7 @@ header {
     background: #3a3a3a;
     width: 100%;
     height: 1px;
-    margin: 10px 0 20px 0;
+    margin: 10px 0;
 }
 .header nav {
 /*  grid-row: 2 / span 1; */
@@ -197,13 +211,15 @@ header nav ul {
 
 /* --- CURRENT CONTENT --- */
 .content {
+  background: url("../img/circle.png") no-repeat center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   flex-flow: row wrap;
 }
-figure {
+.video {
     width: 80%;
     height: 0;
     padding-bottom: 56.25%;
@@ -225,9 +241,10 @@ footer {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
+  background:  #003c00;
 }
-footer h3 {
-  color: white;
+footer h4 {
+  color: #cc9900;
   margin: 25px 0 0 0;
 }
 footer .youtube {
@@ -242,9 +259,9 @@ footer .social-icons {
     flex-flow: row wrap;
 }
 .social-icons i {
-    font-size: 2.25em;
-    color: white;
-    padding: 10px 20px;
+    font-size: 2em;
+    color: #cc9900;
+    padding: 5px;
 }
 
 /* ==========================================================================
